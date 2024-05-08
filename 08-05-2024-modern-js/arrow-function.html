@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function</title>
+</head>
+<body>
+    
+
+
+
+
+
+<script>
+
+    //ES5
+            // function merhaba() {
+            //     console.log("merhaba");
+
+            // }
+            //  merhaba();
+
+            var merhaba = function(isim){
+                console.log("merhaba" + " " + isim);
+            }
+
+            merhaba("atakan");
+
+    //ES6
+
+           const  merhabaES6 = (isim) => {console.log("merhaba" + " " + isim)};   
+
+             merhabaES6("ahmet");
+
+
+             var toplamES5 = function(a, b){
+                return a+b;
+             }
+
+            var sonuc = toplamES5(10,8);
+            console.log(sonuc);
+
+            const toplamES6 = (a,b) => {
+                return a+b
+                 } ;
+
+            sonuc2 = toplamES6(20,45);
+            console.log(sonuc2);
+
+</script>
+
+</body>
+</html>

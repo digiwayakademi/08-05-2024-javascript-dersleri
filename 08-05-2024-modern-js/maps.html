@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maps</title>
+</head>
+<body>
+    
+
+
+
+<script>
+    const ogrenciler = new Map();
+
+    ogrenciler.set(1,"Ahmet polat");
+    ogrenciler.set("35343654612","Burak Sevinç");
+    ogrenciler.set(true,"Eda");
+
+
+    console.log(ogrenciler.get(1));    
+    console.log(ogrenciler.get("35343654612"));
+    console.log(ogrenciler.get(true));
+
+    let sonuc;
+
+    sonuc = ogrenciler.size;
+    sonuc = ogrenciler.has(2);
+    //sonuc = ogrenciler.delete(1);
+
+    console.log(ogrenciler.get(1));
+    
+    //ogrenciler.clear();
+
+    for(let a of ogrenciler.keys())
+    {
+        console.log(a);
+    }
+
+    for(let a of ogrenciler.values())
+    {
+        console.log(a);
+    }
+
+    for(let a of ogrenciler.entries())
+    {
+        console.log(a);
+    }
+   
+
+</script>
+
+
+
+</body>
+</html>

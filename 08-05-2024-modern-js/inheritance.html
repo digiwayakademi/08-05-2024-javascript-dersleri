@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalıtım</title>
+</head>
+<body>
+    
+
+<script>
+//Kisi => k1,k2
+//Ogrenci => o1, o2
+//Ogretmen => k1,k2, a
+
+
+//temel sınıf // parent
+class Kisi {
+    constructor(ad, dogumYili){
+        console.log("Kişi constructor");
+        this.ad = ad;
+        this.dogumYili = dogumYili;
+    }
+
+    yasHesapla() {
+        let tarih = new Date().getFullYear();
+        return tarih - this.dogumYili;
+    }
+
+    kendiniTanit(){
+        return `benim adım ${this.ad}`
+    }
+}
+
+//child 
+class Ogrenci extends Kisi{
+    constructor(ad, dogumYili, okulNumarası){
+        console.log("öğrenci constructor");
+       super(ad, dogumYili);
+       this.okulNumarası = okulNumarası;
+    }
+
+    yazilimCalis(){
+        return `${this.ad} yazılım çalışıyor.`
+    }
+
+    kendiniTanit(){
+        return `benim adım ${this.ad} okul numaram ${this.okulNumarası}`
+    }
+}
+
+
+let kisi = new Kisi("ahmet",2008);
+let ogrenci = new Ogrenci("furkan",1998, 314);
+
+// console.log(kisi.yasHesapla());
+// console.log(ogrenci.yasHesapla());
+// console.log(ogrenci.yazilimCalis());
+
+
+console.log(kisi.kendiniTanit());
+console.log(ogrenci.kendiniTanit());
+</script>
+
+
+
+
+</body>
+</html>
